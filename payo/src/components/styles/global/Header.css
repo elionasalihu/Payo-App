@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+.payo-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(248, 249, 247, 0.94);
+  border-bottom: 1px solid #e7e9e5;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.payo-header-inner {
+  width: min(1180px, calc(100% - 48px));
+  height: 78px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+/* LOGO */
+
+.payo-logo {
+  display: inline-flex;
+  align-items: baseline;
+  width: fit-content;
+
+  color: #111827;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1;
+  text-decoration: none;
+
+  transition: opacity 180ms ease;
+}
+
+.payo-logo-o{
+  color: #20b86b;
+  font-weight: 700;
+}
+
+.payo-logo b {
+  color: #20b86b;
+  font-weight: 700;
+}
+
+.payo-logo:hover {
+  opacity: 0.72;
+}
+
+/* DESKTOP NAV */
+
+.payo-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.payo-nav a {
+  color: #667085;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: color 180ms ease;
+}
+
+.payo-nav a:hover {
+  color: #111827;
+}
+
+/* HEADER ACTIONS */
+
+.payo-header-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 22px;
+}
+
+.payo-login {
+  color: #273142;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: color 180ms ease;
+}
+
+.payo-login:hover {
+  color: #20b86b;
+}
+
+.payo-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 40px;
+  padding: 0 16px;
+
+  background: #20b86b;
+  color: #ffffff;
+  border-radius: 8px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.payo-header-cta:hover {
+  background: #159456;
+  transform: translateY(-1px);
+}
+
+.payo-header-cta svg {
+  transition: transform 180ms ease;
+}
+
+.payo-header-cta:hover svg {
+  transform: translateX(2px);
+}
+
+/* BURGER BUTTON */
+
+.payo-menu-button {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e0e3df;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #111827;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.payo-menu-button:hover {
+  background: #f3f5f2;
+  border-color: #d5d9d4;
+}
+
+/* MOBILE MENU */
+
+.payo-mobile-menu {
+  display: none;
+}
+
+.payo-mobile-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.payo-mobile-nav a {
+  display: flex;
+  align-items: center;
+
+  min-height: 52px;
+
+  border-bottom: 1px solid #e7e9e5;
+
+  color: #273142;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: color 180ms ease;
+}
+
+.payo-mobile-nav a:hover {
+  color: #20b86b;
+}
+
+.payo-mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-top: 18px;
+}
+
+.payo-mobile-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0 17px;
+
+  color: #273142;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.payo-mobile-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 42px;
+  padding: 0 17px;
+
+  background: #20b86b;
+  color: #ffffff;
+  border-radius: 8px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .payo-header-inner {
+    width: min(100% - 36px, 1180px);
+  }
+
+  .payo-nav {
+    gap: 22px;
+  }
+
+  .payo-nav a {
+    font-size: 12px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .payo-header-inner {
+    width: calc(100% - 36px);
+    height: 70px;
+
+    grid-template-columns: 1fr auto;
+  }
+
+  .payo-nav {
+    display: none;
+  }
+
+  .payo-header-actions {
+    gap: 10px;
+  }
+
+  .payo-login,
+  .payo-header-cta {
+    display: none;
+  }
+
+  .payo-menu-button {
+    display: inline-flex;
+  }
+
+  .payo-mobile-menu {
+    display: block;
+
+    width: 100%;
+    padding: 0 18px 22px;
+
+    overflow: hidden;
+
+    background: rgba(248, 249, 247, 0.98);
+    border-top: 1px solid #e7e9e5;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .payo-header-inner {
+    width: calc(100% - 28px);
+    height: 66px;
+  }
+
+  .payo-logo {
+    font-size: 21px;
+  }
+
+  .payo-menu-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .payo-mobile-menu {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

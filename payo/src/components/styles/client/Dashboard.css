@@ -1,0 +1,648 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: #f8f9f7;
+  color: #111827;
+  font-family: "Manrope", sans-serif;
+}
+
+.dashboard-main {
+  min-height: 100vh;
+  margin-left: 250px;
+  padding: 42px 42px 60px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.dashboard-header {
+  max-width: 1280px;
+  margin: 0 auto 34px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.dashboard-eyebrow {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #20b86b;
+
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(27px, 3vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.dashboard-header h1 strong {
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  margin: 9px 0 0;
+
+  color: #667085;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.dashboard-header-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 41px;
+  padding: 0 15px;
+
+  background: #111827;
+  color: #ffffff;
+
+  border: 0;
+  border-radius: 8px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.dashboard-header-add:hover {
+  background: #1d2636;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   BALANCE CARDS
+========================================= */
+
+.dashboard-balance-grid {
+  max-width: 1280px;
+  margin: 0 auto 24px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 14px;
+}
+
+.dashboard-balance-card {
+  min-height: 145px;
+  padding: 19px;
+
+  background: #ffffff;
+  border: 1px solid #e7e9e5;
+  border-radius: 12px;
+}
+
+.dashboard-balance-main {
+  background: #111827;
+  border-color: #111827;
+  color: #ffffff;
+}
+
+.dashboard-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #667085;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-balance-main .dashboard-card-top {
+  color: #98a2b3;
+}
+
+.dashboard-card-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #667085;
+  background: #f5f6f4;
+
+  border-radius: 7px;
+}
+
+.dashboard-card-icon-green {
+  color: #20b86b;
+  background: #eaf8f0;
+}
+
+.dashboard-card-icon-red {
+  color: #d65c5c;
+  background: #fff0f0;
+}
+
+.dashboard-balance-value {
+  margin-top: 22px;
+
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.dashboard-small-value {
+  margin-top: 25px;
+
+  color: #111827;
+
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.dashboard-card-description {
+  margin: 9px 0 0;
+
+  color: #98a2b3;
+
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.dashboard-balance-footer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 12px;
+
+  color: #98a2b3;
+
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.dashboard-positive {
+  color: #20b86b;
+}
+
+.dashboard-balance-main .dashboard-positive {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* =========================================
+   CONTENT GRID
+========================================= */
+
+.dashboard-content-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 14px;
+}
+
+/* =========================================
+   PANELS
+========================================= */
+
+.dashboard-panel {
+  background: #ffffff;
+  border: 1px solid #e7e9e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dashboard-panel-header {
+  min-height: 78px;
+  padding: 17px 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #f0f1ef;
+}
+
+.dashboard-panel-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-panel-header p {
+  margin: 5px 0 0;
+
+  color: #98a2b3;
+
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.dashboard-panel-header a {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+
+  color: #667085;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: color 180ms ease;
+}
+
+.dashboard-panel-header a:hover {
+  color: #20b86b;
+}
+
+/* =========================================
+   EXPENSES
+========================================= */
+
+.dashboard-expense-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-expense {
+  min-height: 67px;
+  padding: 10px 19px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  border-bottom: 1px solid #f0f1ef;
+}
+
+.dashboard-expense:last-child {
+  border-bottom: 0;
+}
+
+.dashboard-expense-icon {
+  width: 33px;
+  height: 33px;
+
+  flex: 0 0 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f6f4;
+  color: #667085;
+
+  border-radius: 8px;
+}
+
+.dashboard-expense-info {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dashboard-expense-info strong {
+  overflow: hidden;
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-expense-info span {
+  overflow: hidden;
+
+  color: #98a2b3;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-expense-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+
+  white-space: nowrap;
+}
+
+.dashboard-expense-amount strong {
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.dashboard-expense-amount span {
+  color: #98a2b3;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.dashboard-expense-more {
+  width: 26px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: transparent;
+  color: #98a2b3;
+
+  border: 0;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   GROUPS
+========================================= */
+
+.dashboard-groups-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-group-card {
+  min-height: 67px;
+  padding: 10px 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-bottom: 1px solid #f0f1ef;
+
+  text-decoration: none;
+
+  transition: background 180ms ease;
+}
+
+.dashboard-group-card:hover {
+  background: #fafbfa;
+}
+
+.dashboard-group-card-avatar {
+  width: 33px;
+  height: 33px;
+
+  flex: 0 0 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef1ee;
+  color: #475467;
+
+  border-radius: 8px;
+
+  font-size: 12.5px;
+  font-weight: 800;
+}
+
+.dashboard-group-card-info {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dashboard-group-card-info strong {
+  overflow: hidden;
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-group-card-info span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #98a2b3;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.dashboard-group-balance {
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.dashboard-group-balance.positive {
+  color: #20b86b;
+}
+
+.dashboard-group-balance.negative {
+  color: #d65c5c;
+}
+
+.dashboard-group-chevron {
+  color: #c2c7c1;
+}
+
+/* =========================================
+   NEW GROUP
+========================================= */
+
+.dashboard-new-group {
+  width: calc(100% - 34px);
+  height: 39px;
+  margin: 13px 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  background: #f7f8f6;
+  color: #475467;
+
+  border: 1px solid #e7e9e5;
+  border-radius: 7px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.dashboard-new-group:hover {
+  background: #eef9f3;
+  color: #159456;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) and (min-width: 761px) {
+  .dashboard-main {
+    margin-left: 220px;
+    padding: 32px 26px 50px;
+  }
+
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+  .dashboard-main {
+    margin-left: 0;
+
+    padding: 27px 16px 95px;
+  }
+
+  .dashboard-header {
+    margin-bottom: 25px;
+
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 25px;
+  }
+
+  .dashboard-header p {
+    max-width: 260px;
+    line-height: 1.5;
+  }
+
+  .dashboard-header-add {
+    width: 41px;
+    height: 41px;
+    min-height: 41px;
+
+    padding: 0;
+    border-radius: 9px;
+  }
+
+  .dashboard-header-add svg {
+    margin: 0;
+  }
+
+  .dashboard-header-add {
+    font-size: 0;
+  }
+
+  .dashboard-balance-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .dashboard-balance-main {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dashboard-balance-card {
+    min-height: 130px;
+    padding: 15px;
+  }
+
+  .dashboard-balance-value {
+    font-size: 29px;
+  }
+
+  .dashboard-small-value {
+    margin-top: 22px;
+    font-size: 21px;
+  }
+
+  .dashboard-panel-header {
+    padding: 15px;
+  }
+
+  .dashboard-expense {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .dashboard-header h1 {
+    font-size: 23px;
+  }
+
+  .dashboard-balance-grid {
+    gap: 8px;
+  }
+
+  .dashboard-balance-card {
+    padding: 14px;
+  }
+
+  .dashboard-expense-amount {
+    display: none;
+  }
+}

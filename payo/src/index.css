@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --payo-green: #20b86b;
+  --payo-green-dark: #159456;
+  --payo-green-soft: #eaf8f0;
+  --payo-red: #d65c5c;
+  --payo-red-soft: #fff0f0;
+
+  --payo-ink: #111827;
+  --payo-text: #273142;
+  --payo-muted: #667085;
+  --payo-light: #98a2b3;
+
+  --payo-bg: #f8f9f7;
+  --payo-white: #ffffff;
+  --payo-border: #e7e9e5;
+  --payo-border-soft: #f0f1ef;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--payo-bg);
+  color: var(--payo-ink);
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "DM Mono", source-code-pro, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Shared logo letters (used in sidebar + landing) */
+.payo-logo-o {
+  color: var(--payo-green);
+  font-weight: 700;
+}
+
+/* Full page loader */
+.payo-loader {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--payo-muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.payo-loader-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--payo-green);
+  animation: payo-pulse 900ms ease-in-out infinite alternate;
+}
+
+@keyframes payo-pulse {
+  from { transform: scale(0.7); opacity: 0.5; }
+  to { transform: scale(1.1); opacity: 1; }
+}
+
+/* Toasts */
+.payo-toasts {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.payo-toast {
+  min-width: 220px;
+  max-width: 360px;
+  padding: 12px 14px;
+  background: var(--payo-ink);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.18);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  pointer-events: auto;
+}
+
+.payo-toast.error {
+  background: #7a2424;
+}
+
+@media (max-width: 760px) {
+  .payo-toasts {
+    left: 16px;
+    right: 16px;
+    bottom: 84px;
+  }
+  .payo-toast {
+    max-width: none;
+  }
+}

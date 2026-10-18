@@ -1,0 +1,131 @@
+.payo-cta {
+  padding: 40px 32px 100px;
+}
+
+.payo-cta-inner {
+  max-width: 1280px;
+  min-height: 310px;
+
+  margin: auto;
+  padding: 60px;
+
+  border-radius: 22px;
+  background: #111827;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.payo-cta-inner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -190px;
+  top: -250px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(32, 184, 107, 0.25);
+}
+
+.payo-cta-inner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -80px;
+  bottom: -230px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.payo-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.payo-cta-kicker {
+  color: #20b86b;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.payo-cta h2 {
+  margin: 14px 0 0;
+
+  font-size: 43px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+
+  font-weight: 700;
+}
+
+.payo-cta h2 em {
+  color: #20b86b;
+  font-style: normal;
+}
+
+.payo-cta-button {
+  min-height: 47px;
+  padding: 0 18px;
+
+  border-radius: 10px;
+  background: #20b86b;
+  color: white;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  position: relative;
+  z-index: 3;
+
+  transition: background 0.2s ease;
+}
+
+.payo-cta-button:hover {
+  background: #159456;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .payo-cta {
+    padding: 20px 20px 75px;
+  }
+
+  .payo-cta-inner {
+    min-height: 330px;
+
+    padding: 42px 28px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 45px;
+  }
+
+  .payo-cta h2 {
+    font-size: 35px;
+    letter-spacing: -1.5px;
+  }
+}

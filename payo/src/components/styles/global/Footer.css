@@ -1,0 +1,137 @@
+.payo-footer {
+  background: #ffffff;
+  border-top: 1px solid #e7e9e5;
+  padding: 70px 32px 25px;
+}
+
+.payo-footer-main {
+  max-width: 1280px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+
+  padding-bottom: 75px;
+}
+
+/* BRAND */
+
+.payo-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.payo-footer-logo-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #20b86b;
+  position: relative;
+  overflow: hidden;
+}
+
+.payo-footer-logo-mark::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 20px;
+  border-radius: 8px;
+  background: white;
+  left: 7px;
+  top: 4px;
+  transform: rotate(24deg);
+}
+
+.payo-footer-logo-mark span {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #20b86b;
+  border-radius: 50%;
+  left: 11px;
+  top: 4px;
+}
+
+.payo-footer-logo-text {
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.payo-footer-brand p {
+  margin-top: 12px;
+  color: #667085;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+/* COLUMNS */
+
+.payo-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payo-footer-column > span {
+  margin-bottom: 4px;
+
+  color: #111827;
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.payo-footer-column a {
+  color: #667085;
+  font-size: 10px;
+
+  transition: color 0.2s ease;
+}
+
+.payo-footer-column a:hover {
+  color: #159456;
+}
+
+/* BOTTOM */
+
+.payo-footer-bottom {
+  max-width: 1280px;
+  margin: auto;
+
+  padding-top: 22px;
+  border-top: 1px solid #e7e9e5;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #9aa1aa;
+  font-size: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .payo-footer {
+    padding: 60px 20px 22px;
+  }
+
+  .payo-footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px 30px;
+    padding-bottom: 50px;
+  }
+
+  .payo-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .payo-footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
